@@ -18,8 +18,22 @@ import android.widget.Button;
 import android.graphics.Matrix;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.github.nkzawa.socketio.client.IO;
+import com.github.nkzawa.socketio.client.Socket;
+import java.net.URISyntaxException;
+
+
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private Socket mSocket;
+    {
+        try {
+            mSocket = IO.socket(getString(R.string.socketURI));
+        } catch (URISyntaxException e) {}
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);// hide statusbar of Android
@@ -28,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mSocket.connect();
 
 
         final int colorDown = R.drawable.circle_battle_buttons_pressed;

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp">
+        <TableRow android:weightSum="2">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Attack"
+                android:id="@+id/buttonAttack"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:background="@drawable/circle_battle_buttons"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Defense"
+                android:id="@+id/buttonDefense"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:background="@drawable/circle_battle_buttons"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow android:weightSum="2">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Rotate"
+                android:id="@+id/buttonRotate"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:background="@drawable/circle_battle_buttons"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Taunt"
+                android:id="@+id/buttonTaunt"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:background="@drawable/circle_battle_buttons"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+    </TableLayout>
+</LinearLayout>
